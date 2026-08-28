@@ -18,6 +18,6 @@ const userSchema = new mongoose.Schema({
         lowercase: true,
         unique: true
     }
-})
+}, { timestamps: true });
 
 export const User = mongoose.model('User', userSchema);
