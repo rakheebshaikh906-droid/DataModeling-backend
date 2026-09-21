@@ -11,6 +11,16 @@ const doctorSchema = new mongoose.Schema({
         required: true,
         lowercase: true
     },
+    phone: {
+        type: Number,
+        required: true,
+        lowercase: true
+    },
+    address: {
+        type: String,
+        required: true,
+        lowercase: true
+    },
     qulification: {
         type: String,
         required: true,
