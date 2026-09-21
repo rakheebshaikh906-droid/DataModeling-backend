@@ -19,6 +19,14 @@ const medicalRecordSchema = new mongoose.Schema({
         type: number,
         required: true,
         lowercase: true
+    },
+    patient: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Patient'
+    },
+    doctor: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Doctor'
     }
 })
 
