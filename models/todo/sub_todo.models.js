@@ -22,6 +22,10 @@ const subTodoSchema = new mongoose.Schema({
     cretedby: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Todo'
+    },
+    date: {
+        type: Date,
+        default: Date.now
     }
 }, { timestamps: true });
 
