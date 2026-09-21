@@ -5,12 +5,12 @@ const patientSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
-        lowercase: true
+        lowercase: true,
+        unique: true
     },
     age: {
         type: Number,
-        required: true,
-        lowercase: true
+        required: true
     },
     address: {
         type: String,
@@ -24,16 +24,13 @@ const patientSchema = new mongoose.Schema({
     },
     bloodgroup: {
         type: String,
-        required: true,
-
-
+        required: true
     },
     gender: {
         type: String,
         enum: ['male', 'female'],
-        required: true,
-
+        required: true
     }
-
 }, { timestamps: true });
+
 export const Patient = mongoose.model('Patient', patientSchema);
