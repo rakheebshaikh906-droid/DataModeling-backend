@@ -15,6 +15,10 @@ const hospital = new mongoose.Schema({
         type: String,
         lowercase: true
     },
+    address: {
+        type: String,
+        lowercase: true
+    },
     doctors: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Doctor'
